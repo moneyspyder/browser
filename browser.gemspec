@@ -1,6 +1,7 @@
-# frozen_string_literal: true
 
-require "./lib/browser/version"
+lib = File.expand_path("../lib", __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require "browser/version"
 
 Gem::Specification.new do |s|
   s.name                  = "browser"
@@ -12,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary               = "Do some browser detection with Ruby."
   s.description           = s.summary
   s.license               = "MIT"
-  s.required_ruby_version = ">= 2.5.0"
+  #s.required_ruby_version = ">= 2.5.0"
 
   s.metadata["changelog_uri"] = "https://github.com/fnando/browser/blob/main/CHANGELOG.md"
 
